@@ -22,12 +22,12 @@ def retrieve_data(xml_file):
     box_diagonal = np.sqrt(np.square(box_width) + np.square(box_height))
 
     # Fill the dictionary to be returned
-    image_data[width] = width
-    image_data[height] = height
+    image_data['width'] = width
+    image_data['height'] = height
 
-    image_data[box_width] = box_width
-    image_data[box_height] = box_height
-    image_data[box_diagonal] = box_diagonal
+    image_data['box_width'] = box_width
+    image_data['box_height'] = box_height
+    image_data['box_diagonal'] = np.round(box_diagonal, 1) 
     
     return image_data
 
