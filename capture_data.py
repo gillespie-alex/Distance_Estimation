@@ -5,7 +5,7 @@ import time
 # Connect to the capture device
 def take_photo(camera):
     time_t = time.time()
-    cv2.imwrite(f'photo{time_t}.jpg', camera)
+    cv2.imwrite(f'poker_chips{time_t}.jpg', camera)
 
 def photo_capture():
     cap = cv2.VideoCapture(0)
@@ -17,6 +17,7 @@ def photo_capture():
 
         if key == ord('s'):
             take_photo(frame)
+            print('picture taken')
 
         elif key == ord('q'):
             break
@@ -25,3 +26,4 @@ def photo_capture():
 
 if __name__ == '__main__':
     photo_capture()
+
